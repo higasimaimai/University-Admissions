@@ -343,6 +343,7 @@ header {
        column-gap: 16px;
   align-items: center;
   padding: 16px;
+  background-color: #EDEDED;
 }
 header span {
   font-size: 32px;
