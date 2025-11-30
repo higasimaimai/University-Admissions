@@ -1,0 +1,179 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  
+  /*---- apply a natural box layout model to all elements -------*/
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    min-width: 320px;
+    display: grid;
+  }
+
+  #headerWrapper {
+    border-bottom: 1px solid $accentColor;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 50px auto 44px;
+    column-gap: $gutter;
+    align-items: center;
+    padding: $gutter;
+    span {
+      font-size: 32px;
+      font-weight: $normalWeight;
+      color: $secondaryColor;
+    }
+  }
+
+  div#navWrapper {
+    grid-row-start: 4;
+  }
+
+  #top a, #navlinks > a {
+    display: block;
+    text-align: right;
+    font-size: 24px;
+    height: 44px;
+    text-decoration: none;
+    color: $fontColor;
+  }
+
+  #top a {
+    font-size: 24px;
+  }
+
+  #navlinks > a {
+    padding: 15px 13px 0 0;
+  }
+
+  nav {
+    height: 100vh;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    li a {
+      display: block;
+      color: $fontColor;
+      padding: 1rem 2vw;
+      text-decoration: none;
+      text-align: right;
+      border-bottom: 1px solid $accentColor;
+      font-size: 24px;
+      font-weight: $lightWeight;
+    }
+    li.active a {
+      color: $accentColor;
+    }
+  }
+
+  #mainWrapper {
+    padding: $gutter;
+  }
+
+  main {
+    padding: $gutter;
+
+    h1 {
+      font-size: 32px;
+      color: $secondaryColor;
+      margin-bottom: $gutter;
+    }
+
+    h3 {
+      margin-top: 2rem;
+      color: $accentColor;
+    }
+
+    p {
+      font-weight: $lightWeight;
+    }
+  }
+
+  /* FORM GRID LAYOUT FOR SMALL SCREENS */
+  .my-form {
+    display: grid;
+    gap: $gutter;
+
+    label {
+      display: block;
+      font-size: 18px;
+      color: $fontColor;
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        border: 1px solid $accentColor;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: $accentColor;
+      color: white;
+      font-size: 20px;
+      border: none;
+      padding: 15px;
+      margin-top: $gutter;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: darken($accentColor, 10%);
+    }
+  }
+
+  /* Base border for required fields */
+.my-form input:required,
+.my-form select:required {
+    border: 2px solid lighten($accentColor, 20%);
+}
+
+/* Turns red when invalid */
+.my-form input:required:invalid,
+.my-form select:required:invalid {
+    border-color: red;
+}
+
+/* Turns green when valid */
+.my-form input:required:valid,
+.my-form select:required:valid {
+    border-color: green;
+}
+
+
+  #footerWrapper {
+    background-color: $secondaryColor;
+    color: white;
+    padding: $gutter;
+    margin-top: 2rem;
+    text-align: center;
+
+    p {
+      margin: 0;
+      font-size: 14px;
+    }
+  }

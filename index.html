@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Western Ridge University</title>
+    <meta name="description" content="University Admissions">
+    <meta name="author" content="Micah Kariya">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+    <!-- Google Font Stuff -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+
+
+    <!-- Fav Iconn Stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+</head>
+<body>
+    <div id="headerWrapper">
+        <header id="top">
+            <a href="#" class="logo"><img src="images/logo1x.png" alt="site logo" width="" height="" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+            <span>Western Ridge University</span>
+            <a href="#navlinks">&#9776;</a>
+        </header>
+    </div>
+    
+    <div id="navWrapper">
+        <nav id="navlinks">
+            <a href="#top">&#10005</a>
+            <ul>
+                <li><a href="#">Students</a></li>
+                <li class="active"><a href="#">Apply</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Tuition</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="mainWrapper">
+        <main>
+            <h1>Apply</h1>
+            <p>Thank you for your interest in Western Ridge University. We’re excited that you’re considering joining our vibrant and diverse academic community. Whether you’re beginning your college journey or continuing your education, our admissions team is here to support you every step of the way. If you have any questions or need assistance with the application process, please reach out to us at (123) 456-7890. We look forward to helping you take the next step toward your future.</p>
+            <h3>Personal Information</h3>
+            <form method="GET" action="thanks.html" class="my-form" autocomplete="on">
+                <label>First Name: <input type="text" name="fname" autocomplete="given-name" required title="First Name Here"></label>
+                <label>Last Name: <input type="text" name="lname" autocomplete="family-name" required title="Last Name Here"></label>
+                <label>Email: <input type="email" name="email" autocomplete="email" required title="Email Here"></label>
+                <label>Cell Phone: <input type="tel" name="phone" autocomplete="tel" required title="Cell Phone Here"></label>
+                <label>Address: <input type="text" name="address" autocomplete="address-line1" title="Street Address Here"></label>
+                <label>City: <input type="text" name="city" autocomplete="address-level2" title="City Here"></label>
+                <label>State: <input type="text" name="state" autocomplete="address-level1" required title="State Here"></label>
+                <label>Zip Code: <input type="text" name="zipcode" autocomplete="postal-code" required title="Zip Code Here"></label>
+
+                <h3>Communication Preferences</h3>
+                <label><input type="radio" name="communication" value="text">Send text Message Updates</label>
+                <label><input type="radio" name="communication" value="email">Send Email Updates</label>
+                <label><input type="radio" name="communication" value="mail">Snail Mail Updates</label>
+                
+                <h3>Previous School Information</h3>
+                <label>School Type:
+                    <select name="school-type" required>
+                        <option value="">-- Select School Type --</option>
+                        <option value="public">Public High School</option>
+                        <option value="private">Private High School</option>
+                        <option value="charter">Charter School</option>
+                        <option value="homeschool">Homeschool Program</option>
+                        <option value="online">Online High School</option>
+                        <option value="alternative">Alternative School</option>
+                        <option value="boarding">Boarding School</option>
+                    </select>
+                </label>
+
+                <label>High School Graduation Date:
+                    <input type="date" name="hs-grad-date" required>
+                </label>
+
+                <h3>Education Completed</h3>
+                <label><input type="checkbox" name="GED">GED</label>
+                <label><input type="checkbox" name="High School Diploma">High School Diploma</label>
+                <label><input type="checkbox" name="Two Year Associates Degree">Two Year Associates Degree</label>
+
+                <h3>Account Information</h3>
+                <label>UserName (5-10 letters)<input type="text" required pattern="[A-Za-z]{5,10}" title="Please enter a User Name that is 5-10 letters"></label>
+                <label>Password (6 or more)<input type="password" name="password" required minlength="6" title="Please enter at least 6 char long"></label>
+
+                <input type="submit" value="Create My Account">
+            </form>
+        </main>
+    </div>
+
+    <div id="footerWrapper">
+        <footer>
+            <p>&copy; <span id="year">x</span> &bull; Micah Kariya</p>
+        </footer>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

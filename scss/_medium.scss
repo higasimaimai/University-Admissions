@@ -1,0 +1,60 @@
+body {
+    display: block;
+}
+
+#top a, #navlinks > a {
+    display: none;
+}
+
+#top a.logo {
+    display: block;
+}
+
+#top a:not(.logo) {
+    display: none;
+}
+
+nav {
+    height: auto;
+    border-bottom: 2px solid $accentColor;
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    li a {
+        border: none;
+        padding: 1rem;
+    }
+    li a:hover {
+        background-color: $primaryColor;
+    }
+}
+
+form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+form input,
+form select {
+    width: 150px;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"],
+form button[type="submit"] {
+    width: auto;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+}

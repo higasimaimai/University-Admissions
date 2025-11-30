@@ -1,0 +1,25 @@
+/* HEADER: FLEX LAYOUT */
+header {
+    display: flex;
+    align-items: center;
+    padding: $gutter;
+}
+
+/* NAV stays horizontal */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+nav li a {
+    padding: 1rem;
+    border: none;
+    font-size: 1.2rem;
+}
+
+/* active page highlight */
+nav li.active a {
+    color: $accentColor;
+    font-weight: $normalWeight;
+}
